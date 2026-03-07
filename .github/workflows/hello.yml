@@ -1,0 +1,20 @@
+name: Hello GitHub Actions
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: コードを取得
+        uses: actions/checkout@v4
+
+      - name: 挨拶を表示
+        run: echo "GitHub Actions が動きました！"
+
+      - name: Markdownファイルの一覧
+        run: ls -1 *.md
+
+      - name: 今日の日付を表示
+        run: date '+%Y-%m-%d %H:%M:%S'
